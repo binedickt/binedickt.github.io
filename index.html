@@ -16,7 +16,7 @@
 
 
     </form>
-    <p>plot<span id="plot"></span></p>
+    <p><span id="plot"></span></p>
     <py-config type="json">
         {
           "packages": ["numpy", "matplotlib"]
@@ -31,6 +31,7 @@
       fig, ax = plt.subplots()
       ax.scatter(x, y)
       Element('plot').write(fig)
+      fig.close()
     </py-script>
   </body>
 </html>
