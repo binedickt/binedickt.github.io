@@ -28,7 +28,7 @@
       flavour_elements = js.document.getElementsByName("flavour")
 
       def plot(data):
-          plt.rcParams["figure.figsize"] = (22,20)
+          plt.rcParams["figure.figsize"] = (15,20)
           fig, ax = plt.subplots()
           bars = ax.barh(data["name"], data["rating"], height=0.7)
           ax.bar_label(bars)
