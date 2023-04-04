@@ -8,10 +8,8 @@
     <h1>Let's plot random numbers</h1>
     <form onsubmit="return false;"></form>
     
-    <label for="x">x:</label>
-    <input type="text" id="x" name="x" class="py-input" value="10"><br>
-    <label for="y">y:</label>
-    <input type="text" id="y" name="y" class="py-input" value="10"><br>
+    <label for="num">number of dots:</label>
+    <input type="text" id="num" name="num" class="py-input" value="10"><br>
     <input type="submit" value="generate" id="btn-load" class="py-button" py-click="geenerate()">
 
 
@@ -26,8 +24,8 @@
     def geenerate():
       import matplotlib.pyplot as plt
       import numpy as np
-      x = np.random.randn(int(Element("x").element.value))
-      y = np.random.randn(int(Element("y").element.value))
+      x = np.random.randn(int(Element("num").element.value))
+      y = np.random.randn(int(Element("num").element.value))
       fig, ax = plt.subplots()
       ax.scatter(x, y)
       Element('plot').write(fig)
