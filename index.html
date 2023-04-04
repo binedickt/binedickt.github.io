@@ -66,6 +66,8 @@
       x = np.random.randn(int(Element("num").element.value))
       y = np.random.randn(int(Element("num").element.value))
       fig, ax = plt.subplots()
+      fig, ax = plt.subplots(facecolor='grey')
+      ax.set(facecolor = "grey")
       ax.scatter(x, y)
       Element('plot').write(fig)
       plt.close()
