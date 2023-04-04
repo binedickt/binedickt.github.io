@@ -7,10 +7,10 @@
   <body>
     <h1>Let's plot random numbers</h1>
     <div id="plot">
-      <label for="x">Significance level:</label>
-      <input type="text" id="x" name="x" class="py-input" value="0.05"><br>
-      <label for="y">Significance level:</label>
-      <input type="text" id="y" name="y" class="py-input" value="0.05"><br>
+      <label for="x">x:</label>
+      <input type="text" id="x" name="x" class="py-input" value="10"><br>
+      <label for="y">y:</label>
+      <input type="text" id="y" name="y" class="py-input" value="10"><br>
       <input type="submit" value="generate" id="btn-load" class="py-button" py-click="geenerate()">
 
 
@@ -25,8 +25,8 @@
     def geenerate():
       import matplotlib.pyplot as plt
       import numpy as np
-      x = np.random.randn(float(Element("x").element.value))
-      y = np.random.randn(float(Element("y").element.value))
+      x = np.random.randn(int(Element("x").element.value))
+      y = np.random.randn(int(Element("y").element.value))
       fig, ax = plt.subplots()
       ax.scatter(x, y)
       display(fig, target="plot")
