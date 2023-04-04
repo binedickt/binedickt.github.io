@@ -7,17 +7,17 @@
   <body>
     <h1>Let's plot random numbers</h1>
     <form onsubmit="return false;"></form>
-    <!-- <div id="plot"> -->
-      <label for="x">x:</label>
-      <input type="text" id="x" name="x" class="py-input" value="10"><br>
-      <label for="y">y:</label>
-      <input type="text" id="y" name="y" class="py-input" value="10"><br>
-      <input type="submit" value="generate" id="btn-load" class="py-button" py-click="geenerate()">
+    
+    <label for="x">x:</label>
+    <input type="text" id="x" name="x" class="py-input" value="10"><br>
+    <label for="y">y:</label>
+    <input type="text" id="y" name="y" class="py-input" value="10"><br>
+    <input type="submit" value="generate" id="btn-load" class="py-button" py-click="geenerate()">
+    Element('control-group').write(round(sample_size))
 
 
-
-    <!-- </div> -->
     </form>
+    <p>plot<span id="plot"></span></p>
     <py-config type="json">
         {
           "packages": ["numpy", "matplotlib"]
@@ -31,7 +31,7 @@
       y = np.random.randn(int(Element("y").element.value))
       fig, ax = plt.subplots()
       ax.scatter(x, y)
-      display(fig, target="plot")
+      Element('plot').write(ax.scatter(x, y))
     </py-script>
   </body>
 </html>
