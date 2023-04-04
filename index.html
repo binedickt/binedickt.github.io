@@ -27,11 +27,7 @@
           color: #f2f2f2;
         }
         /* Style the form elements */
-        form {
-          margin: 20px;
-          padding: 20px;
-          background-color: #444;
-        }
+
 
         /* Style the submit button */
         input[type="submit"] {
@@ -49,14 +45,14 @@
 
   <body>
     <h1>Let's plot random numbers</h1>
-    <form onsubmit="return false;"></form>
+
     
     <label for="num">number of dots:</label>
     <input type="text" id="num" name="num" class="py-input" value="10"><br>
     <input type="submit" value="generate" id="btn-load" class="py-button" py-click="geenerate()">
 
 
-    </form>
+
     <p><span id="plot"></span></p>
     <py-config type="json">
         {
