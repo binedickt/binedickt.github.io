@@ -51,11 +51,22 @@
 
   <body>
     <h1>Viken's Lair</h1>
+    <div id='container'>
+      <button id="successbtn" onclick="window.location.href='html/random_nums_plot.html';">Random Numbers Plot</button>
 
-    <button id="successbtn" onclick="window.location.href='html/random_nums_plot.html';">Random Numbers Plot</button>
+      <button id="successbtn" onclick="window.location.href='html/python_terminal.html';">Python Terminal</button>
 
-    <button id="successbtn" onclick="window.location.href='html/python_terminal.html';">Python Terminal</button>
-
-    <button id="successbtn" onclick="window.location.href='html/contact.html';">Contact</button>
+      <button id="successbtn" onclick="window.location.href='html/contact.html';">Contact</button>
+    </div>
+    <script>
+      let loader = document.getElementById('loader');
+      let container = document.getElementById('container');
+      if (loader) {
+          loader.style.display = "none";
+      }
+      if (container) {
+          container.style.visibility = "visible";
+      }
+  </script>
   </body>
 </html>
