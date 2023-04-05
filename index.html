@@ -1,4 +1,5 @@
-<html>
+
+<html lang="en">
     <head>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,26 +38,24 @@
         }
         h1 {text-align: center;}
 
-        input[type="submit"] {
-          background-color: #4CAF50;
-          color: white;
-          padding: 14px 20px;
-          margin: 8px 0;
-          border: none;
-          cursor: pointer;
-        }
-
       </style>
     </head>
 
   <body>
     <h1>Viken's Lair</h1>
+    <div id='loader'>LOADING....</div>
     <div id='container'>
       <button id="successbtn" onclick="window.location.href='html/random_nums_plot.html';">Random Numbers Plot</button>
 
       <button id="successbtn" onclick="window.location.href='html/python_terminal.html';">Python Terminal</button>
 
       <button id="successbtn" onclick="window.location.href='html/contact.html';">Contact</button>
+      <button id="primarybtn">Primary</button>
+      <button id="successbtn">Success</button>
+      <button id="infobtn">Info</button>
+      <button id="warningbtn">Warning</button>
+      <button id="dangerbtn">Danger</button>
+      <button id="linkbtn">Link</button>
     </div>
     <script>
       let loader = document.getElementById('loader');
