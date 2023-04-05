@@ -1,7 +1,8 @@
+<!DOCTYPE html>
 <html>
-    <head>
-      <title>Viken's Lair</title>
-      <style>
+  <head>
+    <title>Contact Us</title>
+    <style>
 
         @media only screen and (max-width: 600px) {
           form {
@@ -26,16 +27,26 @@
           background-color: #333;
           color: #f2f2f2;
         }
-        h1 {text-align: center;}
+        /* Style the form elements */
 
       </style>
-    </head>
-
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+  </head>
   <body>
-    <h1>Viken's Lair</h1>
+    <h1>Python Terminal</h1>
 
-    <a href="html/contact.html">Contact Information</a>
-    <a href="html/random_nums_plot.html">Random Numbers Plot</a>
-    <a href="html/python_terminal.html">Python Terminal</a>
+    
+    
+        
+    <py-config>
+        plugins = [
+          "https://pyscript.net/latest/plugins/python/py_tutor.py"
+        ]
+        [[fetch]]
+        files = ["./antigravity.py"]
+    </py-config>
+    <div style="margin-right: 3rem">
+        <py-repl id="my-repl" auto-generate="true"> </py-repl>
+    </div>
   </body>
 </html>
