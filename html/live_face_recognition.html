@@ -1,0 +1,96 @@
+<html>
+    <head>
+      <title>Live Face Recognition</title>
+      <style>
+
+        @media only screen and (max-width: 600px) {
+          form {
+            margin: 10px;
+            padding: 10px;
+          }
+          form label {
+            width: 100px;
+            font-size: 14px;
+          }
+          form input[type="text"] {
+            width: 100%;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+    
+        /* Add some basic styling for the entire page */
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #333;
+          color: #f2f2f2;
+        }
+        /* Style the form elements */
+
+
+        /* Style the submit button */
+        input[type="submit"] {
+          background-color: #4CAF50;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          cursor: pointer;
+        }
+        h1 {text-align: center;}
+      </style>
+      <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+      <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    </head>
+
+  <body>
+    <h1>Live Face Recognition</h1>
+
+    
+    <label for="num">number of dots:</label>
+    <input type="text" id="num" name="num" class="py-input" value="10"><br>
+    <input type="submit" value="generate" id="btn-load" class="py-button" py-click="geenerate()">
+
+
+
+    <p><span id="plot"></span></p>
+    <py-config type="json">
+        {
+          "packages": ["cv2"]
+        }
+    </py-config>
+    <py-script>
+    def face_recog():
+    import cv2
+    cap = cv2.VideoCapture(0)
+    faceCascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
+    while(True):
+        # Capture frame-by-frame
+        ret, frame = cap.read()
+        # Our operations on the frame come here
+        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        # Detect faces in the image
+        faces = faceCascade.detectMultiScale(
+            gray,
+            scaleFactor=1.1,
+            minNeighbors=5,
+            minSize=(30, 30)
+            #flags = cv2.CV_HAAR_SCALE_IMAGE
+        )
+        # print("Found {0} faces!".format(len(faces)))
+        # Draw a rectangle around the faces
+        for (x, y, w, h) in faces:
+            cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
+        # Display the resulting frame
+        cv2.imshow('frame', frame)
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+    # When everything done, release the capture
+    cap.release()
+    cv2.destroyAllWindows()
+    
+
+    </py-script>
+  </body>
+</html>
