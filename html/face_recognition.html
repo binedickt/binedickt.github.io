@@ -1,7 +1,8 @@
+<!DOCTYPE html>
 <html>
-    <head>
-      <title>Viken's Lair</title>
-      <style>
+  <head>
+    <title>Contact Us</title>
+    <style>
 
         @media only screen and (max-width: 600px) {
           form {
@@ -26,23 +27,21 @@
           background-color: #333;
           color: #f2f2f2;
         }
-        h1 {text-align: center;}
-
+        /* Style the form elements */
 
       </style>
-    </head>
-
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+  </head>
   <body>
-    <h1>Viken's Lair</h1>
-    <div id='container'>
-      <button onclick="window.location.href='html/random_nums_plot.html';">Random Numbers Plot</button>
+    <video id="myVidPlayer" controls muted autoplay></video>
 
-      <button onclick="window.location.href='html/python_terminal.html';">Python Terminal</button>
+    <button onclick="snapshot()" >Snapshot</button>
 
-      <button onclick="window.location.href='html/contact.html';">Contact</button>
-
-      <button onclick="window.location.href='html/face_recognition.html';">Face Recognition</button>
+    <div class="mycanvas">
+        <h6>Captured snapshot</h6>
+        <canvas></canvas>
     </div>
-
   </body>
 </html>
+
+
