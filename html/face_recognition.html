@@ -27,7 +27,7 @@
           background-color: #333;
           color: #f2f2f2;
         }
-        video {text-align: center;}
+        video {display: flex; justify-content:center;}
         /* Style the form elements */
 
       </style>
@@ -35,7 +35,7 @@
   </head>
   <body>
     
-    <video display: flex; justify-content:center; id="myVidPlayer" controls muted autoplay></video>
+    <video id="myVidPlayer" controls muted autoplay></video>
     <button onclick="snapshot()" >Snapshot</button>
     
     <div class="mycanvas">
