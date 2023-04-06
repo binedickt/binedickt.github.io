@@ -53,16 +53,19 @@
 
 
     <p><span id="plot"></span></p>
-    <py-config type="json">
-        {
-          "packages": ["opencv-python"]
-        }
+    <py-config type="toml">
+        
+        packages = ["opencv-python"]
+
+        [[fetch]]
+        files = ["./files/haarcascade_frontalface_default.xml"]
+        
     </py-config>
     <py-script>
     def face_recog():
       import cv2
       cap = cv2.VideoCapture(0)
-      faceCascade = cv2.CascadeClassifier("files/haarcascade_frontalface_default.xml")
+      faceCascade = cv2.CascadeClassifier("./files/haarcascade_frontalface_default.xml")
       while(True):
           # Capture frame-by-frame
           ret, frame = cap.read()
