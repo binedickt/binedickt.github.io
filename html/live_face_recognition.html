@@ -44,6 +44,24 @@
               justify-content: center;
               /* width: 100%; */
             }
+        .container{
+        width: 640px;
+        height: 480px;
+        position: relative;
+        margin: 20px;
+        }
+        .box{
+          width: 100%;
+          height: 100%;            
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0.5;}
+        .stack-top{
+          z-index: 9;
+          margin: 10px; /* for demo purpose  */
+        }
+        
       </style>
       <!-- <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" /> -->
       <!-- <script defer src="https://pyscript.net/latest/pyscript.js"></script> -->
@@ -51,11 +69,13 @@
 
   <body>
     <h1>Live Face Recognition</h1>
-    <!-- <video id="myVidPlayer" controls muted autoplay></video> -->
-    <div class="mycanvas">
-      <h6>Captured snapshot</h6>
-      <canvas></canvas>
+
+    <div class="container">
+      <video id="myVidPlayer" controls muted autoplay></video>
+      <div class="mycanvas"><canvas></canvas></div>
     </div>
+
+
     <input type="submit" value="start" id="btn-load" class="py-button" py-click="face_recog()">
     <script>
       var canvas = document.querySelector("canvas");
