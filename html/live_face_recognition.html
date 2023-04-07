@@ -86,7 +86,7 @@
 
     <py-config type="toml">
         
-        packages = ["opencv-python"]
+        packages = ["opencv-python", "matplotlib", "time"]
 
         [[fetch]]
         files = ["./files/haarcascade_frontalface_default.xml"]
@@ -95,6 +95,7 @@
     <py-script>
     def face_recog():
       import cv2
+      from matplotlib import pyplot as plt
       cap = cv2.VideoCapture(1)
       faceCascade = cv2.CascadeClassifier("./files/haarcascade_frontalface_default.xml")
       while(True):
@@ -115,12 +116,13 @@
           #for (x, y, w, h) in faces:
           #    cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
           # Display the resulting frame
-          cv2.imshow("frame", frame)
-          if cv2.waitKey(1) & 0xFF == ord("q"):
-              break
+          plt.imshow(frame)
+          plt.show()
+          time.sleep(1)
+
       # When everything done, release the capture
-      cap.release()
-      cv2.destroyAllWindows()
+      # cap.release()
+      # cv2.destroyAllWindows()
       
 
     </py-script>
