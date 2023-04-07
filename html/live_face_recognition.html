@@ -83,6 +83,7 @@
 
     </script> -->
 
+    <p><span id="plot"></span></p>
 
     <py-config type="toml">
         
@@ -116,9 +117,10 @@
           #for (x, y, w, h) in faces:
           #    cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
           # Display the resulting frame
-          plt.imshow(frame)
-          plt.show()
+          fig = plt.imshow(frame)
+          Element('plot').write(fig)
           time.sleep(1)
+          plt.close()
 
       # When everything done, release the capture
       # cap.release()
