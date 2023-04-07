@@ -130,7 +130,7 @@
 
     <py-config type="toml">
         
-        packages = ["opencv-python", "imageio"]
+        packages = ["opencv-python", "imageio", "base64"]
 
         [[fetch]]
         files = ["./files/haarcascade_frontalface_default.xml"]
@@ -138,6 +138,7 @@
     </py-config>
     <py-script>
     def face_recog():
+      import base64
       import cv2
       import io
       from imageio import imread
