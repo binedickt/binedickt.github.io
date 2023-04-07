@@ -140,7 +140,7 @@
     def face_recog():
       import cv2
       from js import document, Math, setInterval
-      canvas = js.document.getElementById("canvas")
+      canvas = document.getElementById("canvas")
       ctx = canvas.getContext("2d")
       image = cv2.imread(ctx)
       faceCascade = cv2.CascadeClassifier("./files/haarcascade_frontalface_default.xml")
