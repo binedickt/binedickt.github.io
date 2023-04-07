@@ -146,8 +146,9 @@
       canvas = document.getElementById("canvas")
       #print(canvas)
       b64img = canvas.toDataURL().split(';base64,')[1]
-      print(b64img)
-      #img = imageio.v2.imread(io.BytesIO(base64.b64decode(b64img)))
+      #print(b64img)
+      img = imageio.v2.imread(io.BytesIO(base64.b64decode(b64img)))
+      print(img)
       #image = cv2.imread(img)
       #faceCascade = cv2.CascadeClassifier("./files/haarcascade_frontalface_default.xml")
       #gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
