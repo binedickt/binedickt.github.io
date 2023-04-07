@@ -140,6 +140,7 @@
     def face_recog():
       import cv2
       import io
+      from imageio import imread
       from js import document, Math, setInterval
       canvas = document.getElementById("canvas")
       b64img = canvas.toDataURL()
