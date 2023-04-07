@@ -139,10 +139,12 @@
     <py-script>
     def face_recog():
       import cv2
+      import io
       from js import document, Math, setInterval
       canvas = document.getElementById("canvas")
-      ctx = canvas.getContext("2d")
-      image = cv2.imread(ctx)
+      b64img = canvas.toDataURL()
+      img = imread(io.BytesIO(base64.b64decode(b64img)))
+      image = cv2.imread(img)
       faceCascade = cv2.CascadeClassifier("./files/haarcascade_frontalface_default.xml")
       gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
       faces = faceCascade.detectMultiScale(
