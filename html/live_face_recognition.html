@@ -60,8 +60,8 @@
               }
         
       </style>
-      <!-- <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" /> -->
-      <!-- <script defer src="https://pyscript.net/latest/pyscript.js"></script> -->
+      <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+      <script defer src="https://pyscript.net/latest/pyscript.js"></script>
     </head>
 
   <body>
@@ -130,7 +130,7 @@
 
     <py-config type="toml">
         
-        packages = ["opencv-python", "matplotlib"]
+        packages = ["opencv-python"]
 
         [[fetch]]
         files = ["./files/haarcascade_frontalface_default.xml"]
@@ -139,26 +139,22 @@
     <py-script>
     def face_recog():
       import cv2
-      from matplotlib import pyplot as plt
-      cap = cv2.VideoCapture(0)
+      canvas = document.getElementById("canvas")
+      ctx = canvas.getContext("2d")
+      image = cv2.imread(ctx)
       faceCascade = cv2.CascadeClassifier("./files/haarcascade_frontalface_default.xml")
-      while(True):
-          # Capture frame-by-frame
-          ret, frame = cap.read()
-          # Our operations on the frame come here
-          # gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-          # Detect faces in the image
-          # faces = faceCascade.detectMultiScale(
-          #    gray,
-          #    scaleFactor=1.1,
-          #    minNeighbors=5,
-          #    minSize=(30, 30)
-          #    #flags = cv2.CV_HAAR_SCALE_IMAGE
-          #)
+      gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+      faces = faceCascade.detectMultiScale(
+              gray,
+              scaleFactor=1.1,
+              minNeighbors=5,
+              minSize=(30, 30)
+              #flags = cv2.CV_HAAR_SCALE_IMAGE
+          )
           # print("Found {0} faces!".format(len(faces)))
           # Draw a rectangle around the faces
-          #for (x, y, w, h) in faces:
-          #    cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
+      for (x, y, w, h) in faces:
+        cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
           # Display the resulting frame
           
           plt.imwrite("temp.jpg", frame)
