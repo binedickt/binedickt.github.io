@@ -130,7 +130,7 @@
 
     <py-config type="toml">
         
-        packages = ["opencv-python", "imageio", "base64"]
+        packages = ["opencv-python", "imageio"]
 
         [[fetch]]
         files = ["./files/haarcascade_frontalface_default.xml"]
@@ -144,7 +144,7 @@
       from imageio import imread
       from js import document, Math, setInterval
       canvas = document.getElementById("canvas")
-      b64img = canvas.toDataURL()
+      b64img = canvas.toDataURL().split(';base64,')[1]
       img = imread(io.BytesIO(base64.b64decode(b64img)))
       image = cv2.imread(img)
       faceCascade = cv2.CascadeClassifier("./files/haarcascade_frontalface_default.xml")
