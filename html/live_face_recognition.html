@@ -47,7 +47,10 @@
   <body>
     <h1>Live Face Recognition</h1>
     <video id="myVidPlayer" controls muted autoplay></video>
-    
+    <div class="mycanvas">
+      <h6>Captured snapshot</h6>
+      <canvas></canvas>
+    </div>
     <input type="submit" value="start" id="btn-load" class="py-button" py-click="face_recog()">
     <script>
       var canvas = document.querySelector("canvas");
@@ -78,7 +81,7 @@
               alert('You have to enable the mike and the camera');
           });
 
-  </script>
+    </script>
 
 
     <py-config type="toml">
