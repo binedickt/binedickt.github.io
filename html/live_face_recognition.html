@@ -144,22 +144,23 @@
       import imageio
       from js import document, Math, setInterval
       canvas = document.getElementById("canvas")
-      b64img = canvas.toDataURL().split(';base64,')[1]
-      img = imageio.v2.imread(io.BytesIO(base64.b64decode(b64img)))
-      image = cv2.imread(img)
-      faceCascade = cv2.CascadeClassifier("./files/haarcascade_frontalface_default.xml")
-      gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-      faces = faceCascade.detectMultiScale(
-              gray,
-              scaleFactor=1.1,
-              minNeighbors=5,
-              minSize=(30, 30)
-              #flags = cv2.CV_HAAR_SCALE_IMAGE
-          )
-          # print("Found {0} faces!".format(len(faces)))
-          # Draw a rectangle around the faces
-      for (x, y, w, h) in faces:
-        cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
+      print(canvas)
+      #b64img = canvas.toDataURL().split(';base64,')[1]
+      #img = imageio.v2.imread(io.BytesIO(base64.b64decode(b64img)))
+      #image = cv2.imread(img)
+      #faceCascade = cv2.CascadeClassifier("./files/haarcascade_frontalface_default.xml")
+      #gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+      #faces = faceCascade.detectMultiScale(
+      #        gray,
+      #        scaleFactor=1.1,
+      #        minNeighbors=5,
+      #        minSize=(30, 30)
+      #        #flags = cv2.CV_HAAR_SCALE_IMAGE
+      #    )
+      #    # print("Found {0} faces!".format(len(faces)))
+      #    # Draw a rectangle around the faces
+      #for (x, y, w, h) in faces:
+      #  cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
           # Display the resulting frame
           
 
