@@ -118,7 +118,7 @@
           #    cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
           # Display the resulting frame
           
-          Element('plot').write(plt.imshow(frame))
+          plt.imshow(frame)
           time.sleep(1)
           plt.close()
 
