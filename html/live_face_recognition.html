@@ -131,7 +131,7 @@
 
     <py-config type="toml">
         
-        packages = ["opencv-python", "imageio"]
+        packages = ["opencv-python", "imageio", "matplotlib"]
 
         [[fetch]]
         files = ["./files/haarcascade_frontalface_default.xml"]
@@ -144,6 +144,7 @@
       import io
       import imageio
       from js import document, Math, setInterval
+      import matplotlib.pyplot as plt
       canvas = document.getElementById("canvas")
       #print(canvas)
       b64img = canvas.toDataURL().split(';base64,')[1]
