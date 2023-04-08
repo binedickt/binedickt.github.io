@@ -166,14 +166,16 @@
         cv2.rectangle(image, (x, y), (x+w, y+h), (0, 255, 0), 2)
           # Display the resulting frame
       #cv2.imshow("Faces found", image)
-      is_success, buffer = cv2.imencode(".png", image)
-      io_buf = io.BytesIO(buffer)
-      data = "data:image/png;base64," + base64.b64encode(io_buf.read()).decode()
-      print(data)
+      #is_success, buffer = cv2.imencode(".png", image)
+      #io_buf = io.BytesIO(buffer)
+      #data = "data:image/png;base64," + base64.b64encode(io_buf.read()).decode()
+      #print(data)
       #out_canvas = document.getElementById("outputcanvas")
       #ctx = out_canvas.getContext("2d")
-      
       #ctx.drawImage(data, 0 , 0)
+      fig = plt.figure()
+      plt.imshow(img, cmap="gray")
+      display(fig, target="outputcanvas", append=False)
           
 
 
