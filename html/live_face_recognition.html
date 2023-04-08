@@ -169,10 +169,11 @@
       is_success, buffer = cv2.imencode(".png", image)
       io_buf = io.BytesIO(buffer)
       data = "data:image/png;base64," + base64.b64encode(io_buf.read()).decode()
-      out_canvas = document.getElementById("outputcanvas")
-      ctx = out_canvas.getContext("2d")
+      print(data)
+      #out_canvas = document.getElementById("outputcanvas")
+      #ctx = out_canvas.getContext("2d")
       
-      ctx.drawImage(data, 0 , 0)
+      #ctx.drawImage(data, 0 , 0)
           
 
 
