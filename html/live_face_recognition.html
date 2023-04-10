@@ -39,25 +39,25 @@
           cursor: pointer;
         }
         h1 {text-align: center;}
-            .video {margin: 0 auto;
-              display: flex;
-              justify-content: center;
-              /* width: 100%; */
-            }
-            .container {
-              margin: 0 auto;
-              position: absolute;
-              justify-content: center;
-            }
-            .canvas {
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: 10;
-                background-color:rgba(255,0,0,0.5);
-                opacity: 0.5;
-                justify-content: center;
-              }
+        .video {margin: 0 auto;
+          display: flex;
+          justify-content: center;
+          /* width: 100%; */
+        }
+        .container {
+          margin: 0 auto;
+          position: absolute;
+          justify-content: center;
+        }
+        .canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            background-color:rgba(255,0,0,0.5);
+            opacity: 0.5;
+            justify-content: center;
+          }
         
       </style>
       <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
@@ -70,11 +70,12 @@
     <div class="container">
       <video id="myVidPlayer" controls muted autoplay></video>
       <canvas id="canvas" class="canvas"></canvas>
-      <canvas id="outputcanvas" class="canvas"></canvas>
+      
     </div>
     <div id="manual-write"></div>
 
     <input type="submit" value="start" id="btn-load" class="py-button" py-click="face_recog()">
+    <canvas id="outputcanvas" class="canvas"></canvas>
     <script>
 
       function resize_canvas(element)
