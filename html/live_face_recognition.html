@@ -173,14 +173,14 @@
       io_buf = io.BytesIO(buffer)
       data = "data:image/png;base64," + base64.b64encode(io_buf.read()).decode()
       #print(data)
-      manual_div = Element("manual-write")
-      manual_div.element.innerText = data
+      #manual_div = Element("manual-write")
+      #manual_div.element.innerText = data
       #out_canvas = document.getElementById("outputcanvas")
       #ctx = out_canvas.getContext("2d")
       #ctx.drawImage(data, 0 , 0)
-      #fig = plt.figure()
-      #plt.imshow(image, cmap="gray")
-      #display(fig, target="outputcanvas", append=False)
+      fig = plt.figure()
+      plt.imshow(image, cmap="gray")
+      display(fig, target="outputcanvas", append=False)
           
 
 
