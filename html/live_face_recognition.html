@@ -189,7 +189,8 @@
       #ctx.drawImage(data, 0 , 0)
       fig = plt.figure()
       plt.imshow(image, cmap="gray")
-      display(fig, target="outputcanvas", append=False)
+      Element('plot').write(fig)
+      #display(fig, target="outputcanvas", append=False)
           
 
 
