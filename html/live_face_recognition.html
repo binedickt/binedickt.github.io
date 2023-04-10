@@ -180,7 +180,9 @@
       #ctx.drawImage(data, 0 , 0)
       fig = plt.figure()
       plt.imshow(image, cmap="gray")
+      plt.axis('off')
       Element('plot').write(fig)
+      plt.close()
       #display(fig, target="outputcanvas", append=False)
           
 
