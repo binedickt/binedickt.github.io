@@ -58,15 +58,7 @@
             opacity: 0.5;
             justify-content: center;
           }
-          .outputcanvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 10;
-            background-color:rgba(255,0,0,0.5);
-            opacity: 0.5;
-            justify-content: center;
-          }
+
         
       </style>
       <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
@@ -83,8 +75,8 @@
     </div>
     <div id="manual-write"></div>
 
-    <input type="submit" value="start" id="btn-load" class="py-button" py-click="face_recog()">
-    <canvas id="outputcanvas" class="outputcanvas"></canvas>
+    <input type="submit" value="start" id="btn-load" class="py-button" py-click="face_recog()" style="position: absolute; top: 2;">
+    
     <script>
 
       function resize_canvas(element)
@@ -137,8 +129,7 @@
               // myLoop(); 
     </script>
 
-    <p><span id="plot"></span></p>
-
+    <p><span id="plot" style="position: absolute; top: 600"></span></p>
     <py-config type="toml">
         
         packages = ["opencv-python", "imageio", "matplotlib"]
