@@ -1,6 +1,6 @@
 <html>
     <head>
-      <title>Random number plot</title>
+      <title>Game Of Life</title>
       <style>
 
         @media only screen and (max-width: 600px) {
@@ -44,12 +44,12 @@
     </head>
 
   <body>
-    <h1>Let's plot random dots</h1>
+    <h1>Let's watch Gema Of Life</h1>
 
     
-    <label for="num">number of dots:</label>
+    <label for="num">Grid Size N*N:</label>
     <input type="text" id="num" name="num" class="py-input" value="10"><br>
-    <input type="submit" value="generate" id="btn-load" class="py-button" py-click="geenerate()">
+    <input type="submit" value="generate" id="btn-load" class="py-button" py-click="main()">
 
 
 
@@ -149,7 +149,7 @@
           args = parser.parse_args()
           
           # set grid size
-          N = 100
+          N = int(Element("num").element.value)
           if args.N and int(args.N) &gt; 8:
               N = int(args.N)
               
@@ -188,6 +188,7 @@
       
       # call main
       if __name__ == '__main__':
+        main()
     </py-script>
   </body>
 </html>
