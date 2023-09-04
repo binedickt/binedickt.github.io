@@ -18,7 +18,7 @@ function initializeGrids() {
     }
 }
 
-function resetGrids() {
+function resetGrids(rows, cols) {
     for (var i = 0; i < rows; i++) {
         for (var j = 0; j < cols; j++) {
             grid[i][j] = 0;
@@ -115,10 +115,14 @@ function setupControlButtons() {
 }
 
 function updateButtonHandler() {
-    if (playing) return;
+    playing = false;
     resetGrids;
+    var startButton = document.getElementById('start');
+    startButton.innerHTML = "Start";    
+    clearTimeout(timer);
     var rows = document.getElementById('X').value;
     var cols = document.getElementById('Y').value;
+    resetGrids;
 }
 
 function randomButtonHandler() {
