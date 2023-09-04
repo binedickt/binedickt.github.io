@@ -120,8 +120,7 @@ function updateButtonHandler() {
     var startButton = document.getElementById('start');
     startButton.innerHTML = "Start";    
     clearTimeout(timer);
-    var rows = document.getElementById('X').value;
-    var cols = document.getElementById('Y').value;
+    initialize;
     resetGrids;
 }
 
