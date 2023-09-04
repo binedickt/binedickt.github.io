@@ -115,7 +115,11 @@ function setupControlButtons() {
 }
 
 function updateButtonHandler() {
+    let rows = document.getElementById('X').value;
+    let cols = document.getElementById('Y').value;
     location.reload();
+    document.getElementById("X").setAttribute('value', rows);
+    document.getElementById("Y").setAttribute('value', cols);
     console.log("Recreate the grid");
 }
 
