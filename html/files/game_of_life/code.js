@@ -115,11 +115,7 @@ function setupControlButtons() {
 }
 
 function updateButtonHandler() {
-    playing = false;
-    let startButton = document.getElementById('start');
-    startButton.innerHTML = "Start";    
-    clearTimeout(timer);
-    initialize;
+    location.reload();
     console.log("Recreate the grid");
 }
 
