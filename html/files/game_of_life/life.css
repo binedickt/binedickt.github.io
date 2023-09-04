@@ -30,7 +30,7 @@ span {
     padding: .75em;
     border-radius: 5px;
     border: none;    
-    background: color(#19218f);
+    background: linear-gradient(#4318e0, #4318e0);
 }
 
 td.dead {

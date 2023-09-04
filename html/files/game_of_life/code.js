@@ -120,7 +120,7 @@ function updateButtonHandler() {
     var startButton = document.getElementById('start');
     startButton.innerHTML = "Start";    
     clearTimeout(timer);
-    initialize;
+    initialize();
     console.log("Recreate the grid");
     resetGrids;
 }
