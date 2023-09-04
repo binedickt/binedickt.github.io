@@ -108,6 +108,17 @@ function setupControlButtons() {
     // button to set random initial state
     var randomButton = document.getElementById("random");
     randomButton.onclick = randomButtonHandler;
+
+    // button to updategrid
+    var updateButton = document.getElementById("updateGrid");
+    updateButton.onclick = updateButtonHandler;
+}
+
+function updateButtonHandler() {
+    if (playing) return;
+    clearButtonHandler();
+    var rows = document.getElementById('X').value;
+    var cols = document.getElementById('Y').value;
 }
 
 function randomButtonHandler() {
