@@ -1,5 +1,7 @@
-var rows = 40;
-var cols = 40;
+// var rows = 40;
+var rows = document.getElementById('X');
+// var cols = 40;
+var cols = document.getElementById('Y');
 
 var playing = false;
 
