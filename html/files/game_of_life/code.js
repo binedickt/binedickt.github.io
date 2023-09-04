@@ -116,7 +116,7 @@ function setupControlButtons() {
 
 function updateButtonHandler() {
     if (playing) return;
-    clearButtonHandler();
+    resetGrids;
     var rows = document.getElementById('X').value;
     var cols = document.getElementById('Y').value;
 }
