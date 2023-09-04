@@ -120,11 +120,11 @@ function updateButtonHandler() {
     localStorage.setItem("rows_saved", rows_value);
     localStorage.setItem("cols_saved", cols_value);
     location.reload();
-    var rows = localStorage.getItem("rows_saved");
-    var cols = localStorage.getItem("cols_saved");
+    let rows = localStorage.getItem("rows_saved");
+    let cols = localStorage.getItem("cols_saved");
     document.getElementById("X").value=rows;
     document.getElementById("Y").value=cols;
-    console.log("Recreate the grid");
+    console.log("Recreate the grid 10th attemp");
 }
 
 function randomButtonHandler() {
