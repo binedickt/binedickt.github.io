@@ -124,7 +124,7 @@ function updateButtonHandler() {
     location.reload();
     document.getElementById("X").value=localStorage.getItem("rows_saved");
     document.getElementById("Y").value=localStorage.getItem("cols_saved");
-    console.log("Recreate the grid 12th attempt");
+    console.log("Recreate the grid 13th attempt");
 }
 
 function randomButtonHandler() {
