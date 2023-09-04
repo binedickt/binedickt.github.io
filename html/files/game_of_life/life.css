@@ -8,7 +8,7 @@ body {
 }
 
 table {
-    background-color: #C5D6C6;
+    background-color: #fafcfa;
     border-spacing: 0;
 }
 
@@ -39,6 +39,6 @@ td.dead {
 }
 
 td.live {
-    background-color: #CC4774;
+    background-color: #e01822;
     border-radius: 10px;
 }
