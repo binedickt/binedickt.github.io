@@ -1,7 +1,7 @@
 // var rows = 40;
-var rows = document.getElementById('X');
+var rows = document.getElementById('X').value;
 // var cols = 40;
-var cols = document.getElementById('Y');
+var cols = document.getElementById('Y').value;
 
 var playing = false;
 
