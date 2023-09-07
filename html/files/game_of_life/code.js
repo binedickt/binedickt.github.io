@@ -115,8 +115,8 @@ function setupControlButtons() {
 }
 
 function updateButtonHandler() {
-    let rows_value = document.getElementById('X').value;
-    let cols_value = document.getElementById('Y').value;
+    rows_value = document.getElementById('X').value;
+    cols_value = document.getElementById('Y').value;
     // localStorage.setItem("rows_saved", rows_value);
     // localStorage.setItem("cols_saved", cols_value);
     // console.log("rows_value", rows_value)
