@@ -121,10 +121,10 @@ function updateButtonHandler() {
     // localStorage.setItem("cols_saved", cols_value);
     // console.log("rows_value", rows_value)
     // console.log("cols_value", cols_value)
-    initialize(rows_value, cols_value)
+    createTable(rows_value, cols_value)
     // document.getElementById("X").value=localStorage.getItem("rows_saved");
     // document.getElementById("Y").value=localStorage.getItem("cols_saved");
-    console.log("Recreate the grid 15th attempt");
+    console.log("Recreate the grid 16th attempt");
 }
 
 function randomButtonHandler() {
