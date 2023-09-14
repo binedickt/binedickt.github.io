@@ -139,7 +139,7 @@ function updateButtonHandler() {
         }
         table.appendChild(tr);
     }
-    gridContainer.appendChild(table);
+    gridContainer_new.appendChild(table);
 
     let gridContainer = document.getElementById('gridContainer');
     let parentDiv = gridContainer_new.parentNode;
@@ -149,7 +149,7 @@ function updateButtonHandler() {
     createTable()
     // document.getElementById("X").value=localStorage.getItem("rows_saved");
     // document.getElementById("Y").value=localStorage.getItem("cols_saved");
-    console.log("Recreate the grid 23th attempt");
+    console.log("Recreate the grid 24th attempt");
 }
 
 function randomButtonHandler() {
