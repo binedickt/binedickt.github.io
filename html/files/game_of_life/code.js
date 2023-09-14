@@ -122,6 +122,25 @@ function updateButtonHandler() {
     // console.log("rows_value", rows_value)
     // console.log("cols_value", cols_value)
     let gridContainer_new = document.createElement('gridContainer');
+    if (!gridContainer_new) {
+        // Throw error
+        console.error("Problem: No div for the drid table!");
+    }
+    let table = document.createElement("table");
+    
+    for (let i = 0; i < rows; i++) {
+        let tr = document.createElement("tr");
+        for (let j = 0; j < cols; j++) {//
+            let cell = document.createElement("td");
+            cell.setAttribute("id", i + "_" + j);
+            cell.setAttribute("class", "dead");
+            cell.onclick = cellClickHandler;
+            tr.appendChild(cell);
+        }
+        table.appendChild(tr);
+    }
+    gridContainer.appendChild(table);
+
     let gridContainer = document.getElementById('gridContainer');
     let parentDiv = gridContainer_new.parentNode;
     parentDiv.replaceChild(gridContainer, gridContainer_new);
@@ -130,7 +149,7 @@ function updateButtonHandler() {
     createTable()
     // document.getElementById("X").value=localStorage.getItem("rows_saved");
     // document.getElementById("Y").value=localStorage.getItem("cols_saved");
-    console.log("Recreate the grid 22th attempt");
+    console.log("Recreate the grid 23th attempt");
 }
 
 function randomButtonHandler() {
