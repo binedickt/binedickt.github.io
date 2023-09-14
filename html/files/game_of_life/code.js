@@ -121,7 +121,10 @@ function updateButtonHandler() {
     // localStorage.setItem("cols_saved", cols_value);
     // console.log("rows_value", rows_value)
     // console.log("cols_value", cols_value)
-    let gridContainer_new = document.createElement('gridContainer');
+    cols = cols_value
+    rows = rows_value
+    let gridContainer_new = document.createElement("gridContainer");
+    gridContainer_new.setAttribute("id", "gridContainer_new")
     if (!gridContainer_new) {
         // Throw error
         console.error("Problem: No div for the drid table!");
@@ -141,15 +144,14 @@ function updateButtonHandler() {
     }
     gridContainer_new.appendChild(table);
 
-    let gridContainer = document.getElementById('gridContainer');
-    let parentDiv = gridContainer_new.parentNode;
-    parentDiv.replaceChild(gridContainer, gridContainer_new);
-    cols = cols_value
-    rows = rows_value
-    createTable()
+    let gridContainer_old = document.getElementById('gridContainer');
+    let parentDiv = gridContainer_old.parentNode;
+    parentDiv.replaceChild(gridContainer_new, gridContainer_old);
+
+    // createTable()
     // document.getElementById("X").value=localStorage.getItem("rows_saved");
     // document.getElementById("Y").value=localStorage.getItem("cols_saved");
-    console.log("Recreate the grid 24th attempt");
+    console.log("Recreate the grid 25th attempt");
 }
 
 function randomButtonHandler() {
