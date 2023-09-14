@@ -123,13 +123,14 @@ function updateButtonHandler() {
     // console.log("cols_value", cols_value)
     let gridContainer_new = document.createElement('gridContainer');
     let gridContainer = document.getElementById('gridContainer');
-    gridContainer.replaceChild(gridContainer, gridContainer_new);
+    let parentDiv = gridContainer_new.parentNode;
+    parentDiv.replaceChild(gridContainer, gridContainer_new);
     cols = cols_value
     rows = rows_value
     createTable()
     // document.getElementById("X").value=localStorage.getItem("rows_saved");
     // document.getElementById("Y").value=localStorage.getItem("cols_saved");
-    console.log("Recreate the grid 21th attempt");
+    console.log("Recreate the grid 22th attempt");
 }
 
 function randomButtonHandler() {
