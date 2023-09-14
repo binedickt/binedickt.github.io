@@ -117,10 +117,6 @@ function setupControlButtons() {
 function updateButtonHandler() {
     rows_value = document.getElementById('X').value;
     cols_value = document.getElementById('Y').value;
-    // localStorage.setItem("rows_saved", rows_value);
-    // localStorage.setItem("cols_saved", cols_value);
-    // console.log("rows_value", rows_value)
-    // console.log("cols_value", cols_value)
     cols = cols_value
     rows = rows_value
     let gridContainer_new = document.createElement("gridContainer");
@@ -195,6 +191,11 @@ function clearButtonHandler() {
 
 // start/pause/continue the game
 function startButtonHandler() {
+    rows_value = document.getElementById('X').value;
+    cols_value = document.getElementById('Y').value;
+    cols = cols_value
+    rows = rows_value
+    // start at bigger grid 1
     if (playing) {
         console.log("Pause the game");
         playing = false;
