@@ -121,12 +121,13 @@ function updateButtonHandler() {
     // localStorage.setItem("cols_saved", cols_value);
     // console.log("rows_value", rows_value)
     // console.log("cols_value", cols_value)
+    gridContainer.remove()
     cols = cols_value
     rows = rows_value
     createTable()
     // document.getElementById("X").value=localStorage.getItem("rows_saved");
     // document.getElementById("Y").value=localStorage.getItem("cols_saved");
-    console.log("Recreate the grid 16th attempt");
+    console.log("Recreate the grid 17th attempt");
 }
 
 function randomButtonHandler() {
