@@ -191,11 +191,7 @@ function clearButtonHandler() {
 
 // start/pause/continue the game
 function startButtonHandler() {
-    rows_value = document.getElementById('X').value;
-    cols_value = document.getElementById('Y').value;
-    cols = cols_value
-    rows = rows_value
-    // start at bigger grid 2
+    // start at bigger grid 3
     if (playing) {
         console.log("Pause the game");
         playing = false;
@@ -219,6 +215,10 @@ function play() {
 }
 
 function computeNextGen() {
+    rows_value = document.getElementById('X').value;
+    cols_value = document.getElementById('Y').value;
+    cols = cols_value
+    rows = rows_value
     for (let i = 0; i < rows; i++) {
         for (let j = 0; j < cols; j++) {
             applyRules(i, j);
