@@ -12,8 +12,7 @@ let timer;
 let reproductionTime = 100;
 
 function initializeGrids() {
-    let grid = new Array(rows);
-    let nextGrid = new Array(rows);
+
     for (let i = 0; i < rows; i++) {
         grid[i] = new Array(cols);
         nextGrid[i] = new Array(cols);
@@ -21,8 +20,6 @@ function initializeGrids() {
 }
 
 function resetGrids() {
-    let grid = new Array(rows);
-    let nextGrid = new Array(rows);
     for (let i = 0; i < rows; i++) {
         for (let j = 0; j < cols; j++) {
             grid[i][j] = 0;
@@ -32,8 +29,6 @@ function resetGrids() {
 }
 
 function copyAndResetGrid() {
-    let grid = new Array(rows);
-    let nextGrid = new Array(rows);
     for (let i = 0; i < rows; i++) {
         for (let j = 0; j < cols; j++) {
             grid[i][j] = nextGrid[i][j];
@@ -44,6 +39,8 @@ function copyAndResetGrid() {
 
 // Initialize
 function initialize() {
+    let grid = new Array(rows);
+    let nextGrid = new Array(rows);
     createTable();
     initializeGrids();
     resetGrids();
@@ -197,7 +194,7 @@ function clearButtonHandler() {
 
 // start/pause/continue the game
 function startButtonHandler() {
-    // start at bigger grid 4
+    // start at bigger grid 5
     if (playing) {
         console.log("Pause the game");
         playing = false;
