@@ -12,6 +12,8 @@ let timer;
 let reproductionTime = 100;
 
 function initializeGrids() {
+    let grid = new Array(rows);
+    let nextGrid = new Array(rows);
     for (let i = 0; i < rows; i++) {
         grid[i] = new Array(cols);
         nextGrid[i] = new Array(cols);
@@ -19,6 +21,8 @@ function initializeGrids() {
 }
 
 function resetGrids() {
+    let grid = new Array(rows);
+    let nextGrid = new Array(rows);
     for (let i = 0; i < rows; i++) {
         for (let j = 0; j < cols; j++) {
             grid[i][j] = 0;
@@ -28,6 +32,8 @@ function resetGrids() {
 }
 
 function copyAndResetGrid() {
+    let grid = new Array(rows);
+    let nextGrid = new Array(rows);
     for (let i = 0; i < rows; i++) {
         for (let j = 0; j < cols; j++) {
             grid[i][j] = nextGrid[i][j];
@@ -191,7 +197,7 @@ function clearButtonHandler() {
 
 // start/pause/continue the game
 function startButtonHandler() {
-    // start at bigger grid 3
+    // start at bigger grid 4
     if (playing) {
         console.log("Pause the game");
         playing = false;
@@ -238,6 +244,8 @@ function computeNextGen() {
 // Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
 
 function applyRules(row, col) {
+    let grid = new Array(rows);
+    let nextGrid = new Array(rows);
     let numNeighbors = countNeighbors(row, col);
     if (grid[row][col] == 1) {
         if (numNeighbors < 2) {
@@ -255,10 +263,6 @@ function applyRules(row, col) {
     }
     
 function countNeighbors(row, col) {
-    rows_value = document.getElementById('X').value;
-    cols_value = document.getElementById('Y').value;
-    cols = cols_value
-    rows = rows_value
     let count = 0;
     if (row-1 >= 0) {
         if (grid[row-1][col] == 1) count++;
