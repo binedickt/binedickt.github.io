@@ -195,7 +195,7 @@ function startButtonHandler() {
     cols_value = document.getElementById('Y').value;
     cols = cols_value
     rows = rows_value
-    // start at bigger grid 1
+    // start at bigger grid 2
     if (playing) {
         console.log("Pause the game");
         playing = false;
@@ -255,6 +255,10 @@ function applyRules(row, col) {
     }
     
 function countNeighbors(row, col) {
+    rows_value = document.getElementById('X').value;
+    cols_value = document.getElementById('Y').value;
+    cols = cols_value
+    rows = rows_value
     let count = 0;
     if (row-1 >= 0) {
         if (grid[row-1][col] == 1) count++;
